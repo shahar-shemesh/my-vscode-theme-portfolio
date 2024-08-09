@@ -159,8 +159,10 @@
       "link": "shahar.website",
       "technologics": [
         "react",
-        "node",
+        "redux",
+        "toolkit",
         "typescript",
+        "node",
         "html",
         "css-modules"
       ]
