@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import classes from './Footer.module.css';
+import { useDispatch } from 'react-redux';
+import { dispayLeaveMessage } from '../../store/terminalSlice';
+
 
 const TerminalMessage: React.FC<{ terminalMsgRef: React.RefObject<HTMLDivElement> }> = (props) => {
 
   const time = new Date().toLocaleTimeString();
-  // const fullPath = window.location.hostname;
-  const [visitCount, setVisitCount] = useState(0);
+  const [visitCount, setVisitCount] = useState<number>(0);
 
   useEffect(() => {
     const storedCount = localStorage.getItem("visitCount");
@@ -21,7 +23,6 @@ const TerminalMessage: React.FC<{ terminalMsgRef: React.RefObject<HTMLDivElement
       <span className={classes.currentTime}>{time}</span>
       <span className={classes.name}>[shahar]</span>
       <span className={classes.message}>leave a message</span>
-      {/* <span className={classes.path}>/{fullPath}</span> */}
       <span className={classes.path}>/contact</span>
       <span className={classes.fileUpdated}>(x{visitCount})</span>
     </div>

@@ -37,7 +37,7 @@ const Portfolio: React.FC = (props) => {
 
   }, []);
 
-  const sortedPortfolio = DATA?.portfolio?.sort((a, b) => parseInt(a.id) - parseInt(b.id));
+  const sortedPortfolio: portfolioProject[] = DATA?.portfolio?.sort((a, b) => parseInt(a.id) - parseInt(b.id));
 
   return (
     <section tabIndex={0} id="portfolio" className={classes.portfolio}>

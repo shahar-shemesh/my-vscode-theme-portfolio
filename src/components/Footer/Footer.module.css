@@ -1,4 +1,5 @@
 footer {
+    z-index: 10;
     display: grid;
     grid-template-rows: 0.7rem auto;
     grid-template-areas:
@@ -6,7 +7,6 @@ footer {
         'container';
 
     position: fixed;
-    z-index: 10;
     top: 85vh;
     width: 100%;
     height: 100%;
@@ -89,8 +89,13 @@ footer {
 
 
 .slide-up {
-    transition: all 0.8s ease-out;
+    transition: all 1s ease-out;
     max-height: 1000px;
+    overflow: hidden;
+}
+
+.slide-down {
+    transition: all 1s ease-in;
     overflow: hidden;
 }
 

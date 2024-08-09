@@ -2,44 +2,49 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import classes from './Contact.module.css';
+import { useDispatch } from 'react-redux';
+import { dispayLeaveMessage } from '../../store/terminalSlice';
 
 const Contact: React.FC<{
     formRef: React.RefObject<HTMLFormElement>,
-    handleHide: (ref: React.RefObject<HTMLFormElement>) => void,
+    handleHide: (ref: React.RefObject<HTMLFormElement | HTMLDivElement>) => void,
     setVisible: (newState: Boolean) => void,
 }> = (props) => {
+
+    const dispatch = useDispatch();
+
     const formRef: React.RefObject<HTMLFormElement> = useRef<HTMLFormElement>(null);
     const submit: React.RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null);
 
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if (submit.current && formRef.current) {
-            submit.current.value = "Sending...";
+        submit.current!.value = "Sending...";
 
-            emailjs.sendForm(
-                'shahar.website',
-                'shahar.website',
-                formRef.current, {
-                publicKey:
-                    'B2ReO4YLnvHV3iZUt',
-            }).then(() => {
-                (e.target as HTMLFormElement).reset();
+        emailjs.sendForm(
+            'shahar.website',
+            'shahar.website',
+            formRef.current!, {
+            publicKey:
+                'B2ReO4YLnvHV3iZUt',
+        }).then(async () => {
+            (e.target as HTMLFormElement).reset();
+            if (submit.current) {
+                submit.current.value = "The message was sent.";
+                submit.current.disabled = true;
+                props.setVisible(false);
+                await props.handleHide(props.formRef);
+                setTimeout(() => dispatch(dispayLeaveMessage(true)), 1000);
+            }
+        },
+            (error) => {
+                console.log('FAILED...', error.text);
                 if (submit.current) {
-                    submit.current.value = "The message was sent.";
-                    submit.current.disabled = true;
-                    props.setVisible(false);
-                    props.handleHide(props.formRef);
+                    submit.current.value = "Error. try again.";
                 }
             },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                    if (submit.current) {
-                        submit.current.value = "Error. try again.";
-                    }
-                },
-            );
-        }
+        );
+
 
     };
 

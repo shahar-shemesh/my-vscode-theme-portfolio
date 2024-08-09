@@ -1,15 +1,20 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { useState, useRef } from 'react';
 import Contact from './Contact';
-import { useState, useRef, useEffect } from 'react';
 import classes from './Footer.module.css';
 import TerminalMessage from './TerminalMessage';
+import { RootState } from '../../store';
+import {
+  expandTerminal as expandTerminalAction,
+  dispayLeaveMessage as dispayLeaveMessageAction
+} from '../../store/terminalSlice';
+
 
 const Footer: React.FC = (props) => {
+  const dispatch = useDispatch();
+  const terminalState = useSelector((state: RootState) => state.terminal);
 
-
-  const [leaveMessageVisible, setLeaveMessageVisible] = useState<Boolean>(true);
   const [contactFormVisible, setContactFormVisible] = useState<Boolean>(true);
-  const [expandTerminal, setExpandTerminal] = useState<Boolean>(false);
-
 
   const terminalMsgRef: React.RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
   const contactForm: React.RefObject<HTMLFormElement> = useRef<HTMLFormElement>(null);
@@ -25,8 +30,6 @@ const Footer: React.FC = (props) => {
     }
   };
 
-
-
   const viewportHeight = window.innerHeight;
   const vh = 80;
   const px = (vh / 100) * viewportHeight;
@@ -35,25 +38,21 @@ const Footer: React.FC = (props) => {
 
 
   function onTerminal() {
-    setExpandTerminal((prevVal) => {
-      if (prevVal) {
-        setSidebarTop(px);
-        return false;
-      }
-      else {
-        return true;
-      }
-    });
+    if (terminalState.open) {
+      setSidebarTop(px);
+    }
+    dispatch(expandTerminalAction());
   }
 
 
+  const rsMouseDownHandler = (e: React.MouseEvent<HTMLElement>) => {
 
-  const rsMouseDownHandler = (e: React.MouseEvent) => {
-
-    if (["INPUT", "TEXTAREA"].includes(e.target.toString())) {
-      setLeaveMessageVisible(false);
-      handleHide(terminalMsgRef);
-      setExpandTerminal(true);
+    if (["INPUT", "TEXTAREA"].includes((e.target as HTMLElement).tagName)) {
+      dispatch(dispayLeaveMessageAction(false));
+      //handleHide(terminalMsgRef);
+      if (!terminalState.open) {
+        dispatch(expandTerminalAction());
+      }
     }
 
     else {
@@ -88,7 +87,7 @@ const Footer: React.FC = (props) => {
       ref={sidebarRef}
       onMouseDown={rsMouseDownHandler}
       style={{ top: `${sidebarTop}px` }}
-      className={expandTerminal ? classes.expand : ""}
+      className={terminalState.open ? classes.expand : ""}
     >
 
       <div className={classes.resizer} style={{ cursor: 'ns-resize' }}>
@@ -110,7 +109,7 @@ const Footer: React.FC = (props) => {
 
 
           <div
-            className={classes['slide-up'] + ` ${!leaveMessageVisible ? classes['slide-up-hidden'] : ''}`}>
+            className={classes['slide-up'] + ` ${!terminalState.leaveMessage ? classes['slide-up-hidden'] : classes['slide-down']}`}>
             <TerminalMessage terminalMsgRef={terminalMsgRef} />
           </div>
 
@@ -129,8 +128,8 @@ const Footer: React.FC = (props) => {
           <span><i className='plus'></i><i className='arrow-down'></i></span>
           <span><i className='trash'></i></span>
 
-          {!expandTerminal && (<span onClick={onTerminal}><i className='arrow-up' id='expandTerminal'></i></span>)}
-          {expandTerminal && (<span onClick={onTerminal}><i className='arrow-down' id='expandTerminal'></i></span>)}
+          {!terminalState.open && (<span onClick={onTerminal}><i className='arrow-up' id='expandTerminal'></i></span>)}
+          {terminalState.open && (<span onClick={onTerminal}><i className='arrow-down' id='expandTerminal'></i></span>)}
 
           <span onClick={() => { document.getElementById("footer")!.style.display = "none"; }}>
             <i className='close'></i>
