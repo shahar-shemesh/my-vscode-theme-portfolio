@@ -1,0 +1,13 @@
+{
+  "id": "7",
+  "src": "/img/shoppinglisttoapi.png",
+  "title": "Shopping list API",
+  "description": "A platform for managing shopping lists efficiently. Users can create, update, and store their lists in a SQL database.",
+  "link": "github.com/shahar-shemesh/shoppinglist-to-api",
+  "technologics": [
+    "node",
+    "azure",
+    "mssql",
+    "javascript"
+  ]
+}
