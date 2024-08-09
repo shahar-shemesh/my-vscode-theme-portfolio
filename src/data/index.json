@@ -52,7 +52,7 @@
   ],
   "portfolio": [
     {
-      "id": "1",
+      "id": "4",
       "src": "/img/gadish-suite.png",
       "title": "Gadish Suite application",
       "description": "An application that showcases suite rental. It provides potential guests with all the information they need to make an informed decision and book a stay.",
@@ -160,7 +160,7 @@
       "technologics": [
         "react",
         "node",
-        "javascript",
+        "typescript",
         "html",
         "css-modules"
       ]
