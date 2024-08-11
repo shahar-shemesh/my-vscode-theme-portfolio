@@ -1,8 +1,7 @@
 
 <h1 align="center">My VSCode Theme Portfolio</h1>
 
-<p align="center"><img src="https://res.cloudinary.com/dk22rcdch/image/upload/v1630127769/Blogimages/Screenshot_2021-08-28_at_10.46.02_AM_yapvfb.png" alt="project"></p>
-
+<p align="center"><img src="https://github.com/user-attachments/assets/af2968e7-a0fc-4b14-b787-a76274c4eb61" alt="project"></p>
 
 <p>This project is a personal portfolio built with React and TypeScript, showcasing custom components and theming inspired by Visual Studio Code. It allows users to toggle between different themes and features various UI components that reflect the style and functionality of a developer's environment.</p>
 
