@@ -1,4 +1,4 @@
-// import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react";
 
 import Divider from './components/Divider/Divider';
 import About from './components/About/About';
@@ -33,7 +33,7 @@ function App() {
 
       <Portfolio />
 
-      {/* <Analytics /> */}
+      <Analytics />
 
       <Footer />
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const LineNumbers: React.FC = (props) => {
+const LineNumbers: React.FC = () => {
 
     const [rows, setRows] = useState<number>(10);
 
@@ -14,7 +14,7 @@ const LineNumbers: React.FC = (props) => {
 
     return (
         <div id="lines">
-            {[...Array(rows)].map((row, index) => <p tabIndex={0} key={index} id="row"></p>)}
+            {[...Array(rows)].map((row, index) => <p tabIndex={0} key={index} id={index.toString()}></p>)}
         </div>
     );
 };
