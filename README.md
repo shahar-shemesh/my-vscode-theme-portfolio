@@ -1,46 +1,76 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">My VSCode Theme Portfolio</h1>
 
-## Available Scripts
+<p align="center">
+  <img src="https://res.cloudinary.com/dk22rcdch/image/upload/v1630127769/Blogimages/Screenshot_2021-08-28_at_10.46.02_AM_yapvfb.png" alt="project">
+</p>
 
-In the project directory, you can run:
+<p>This project is a personal portfolio built with React and TypeScript, showcasing custom components and theming inspired by Visual Studio Code. It allows users to toggle between different themes and features various UI components that reflect the style and functionality of a developer's environment.</p>
 
-### `npm start`
+<p align="center">
+  <img src="https://img.shields.io/github/license/saurabhnative/create-frontend-readme" alt="license">
+  <img src="https://img.shields.io/github/stars/saurabhnative/create-frontend-readme" alt="stars">
+  <img src="https://img.shields.io/github/forks/saurabhnative/create-frontend-readme" alt="forks">
+  <a href="https://twitter.com/intent/tweet?text=Checkout%20readme-gen.vercel.app%20by%20@saurabhnative.%20Most%20advanced%20README%20generator%20for%20your%20Github projects🔥">
+    <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsaurabhnative%2Fcreate-frontend-readme">
+  </a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h2>🚀 Demo</h2>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[https://readme-gen.vercel.app/](https://readme-gen.vercel.app/)
 
-### `npm test`
+<h2>🧐 Features</h2>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Here're some of the project's best features:
 
-### `npm run build`
+* Theming: Toggle between light and dark themes, with persistent settings stored in local storage.
+* Responsive Design: Fully responsive design that adapts to various screen sizes.
+* Custom Components: Reusable components including headers, footers, navigations, and more.
+* Portfolio Showcase: A section dedicated to displaying portfolio projects.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h2>🛠️ Installation Steps:</h2>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p>1. Clone the repository</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone [your-repo-url]
+```
 
-### `npm run eject`
+<p>2. Install the dependencies</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p>3. Start the development server</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<h2>Project Structure</h2>
 
-## Learn More
+- **src/**: Contains the source code of the application.
+  - **components/**: Reusable components used throughout the app.
+  - **data/**: Static JSON files used for data representation.
+  - **store/**: Redux store and slices for managing global state.
+  - **index.tsx**: The main entry point for the React application.
+  - **App.tsx**: The root component of the app.
+- **public/**: Public assets and the main HTML file.
+- **package.json**: Contains scripts and dependencies for the project.
+- **tsconfig.json**: TypeScript configuration file.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h2>🍰 Contribution Guidelines:</h2>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and open a pull request.
+
+<h2>🛡️ License:</h2>
+
+This project is licensed under the MIT License.
+
+<h2>💖 Like my work?</h2>
+
+If you found this project helpful, please consider supporting me with a star on GitHub or a coffee.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T24KNL5)
