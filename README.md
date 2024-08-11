@@ -49,6 +49,26 @@ npm start
 - **package.json**: Contains scripts and dependencies for the project.
 - **tsconfig.json**: TypeScript configuration file.
 
+
+## Components Overview
+
+### Header
+- Located at `src/components/Header/Header.tsx`
+- Contains the site's main navigation and theme toggle functionality.
+
+### Footer
+- Located at `src/components/Footer/Footer.tsx`
+- Displays footer information and a terminal-style message component.
+
+### Portfolio
+- Located at `src/components/Portfolio/Portfolio.tsx`
+- Renders a grid of portfolio projects with details and links.
+
+### Line Numbers
+- Located at `src/components/LineNumbers/LineNumbers.tsx`
+- Simulates the appearance of line numbers, with interactive shrinking functionality.
+
+
 <h2>🍰 Contribution Guidelines:</h2>
 
 Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and open a pull request.
