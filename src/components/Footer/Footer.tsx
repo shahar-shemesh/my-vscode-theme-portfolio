@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useRef } from 'react';
-import Contact from './Contact';
+import Contact from './Contact/Contact';
 import classes from './Footer.module.css';
 import TerminalMessage from './TerminalMessage';
 import { RootState } from '../../store';
@@ -49,7 +49,6 @@ const Footer: React.FC = (props) => {
 
     if (["INPUT", "TEXTAREA"].includes((e.target as HTMLElement).tagName)) {
       dispatch(dispayLeaveMessageAction(false));
-      //handleHide(terminalMsgRef);
       if (!terminalState.open) {
         dispatch(expandTerminalAction());
       }
@@ -106,38 +105,27 @@ const Footer: React.FC = (props) => {
             </div>
           </div>
 
-
-
           <div
             className={classes['slide-up'] + ` ${!terminalState.leaveMessage ? classes['slide-up-hidden'] : classes['slide-down']}`}>
             <TerminalMessage terminalMsgRef={terminalMsgRef} />
           </div>
 
-
-
-
           <div className={classes.form + " " + classes['slide-up'] + ` ${!contactFormVisible ? classes['slide-up-hidden'] : ''}`}>
             <Contact formRef={contactForm} handleHide={handleHide} setVisible={setContactFormVisible} />
           </div>
-
-
         </div>
 
         <div className={classes.terminalButtons}>
           <span><i className='bx bash'></i>bash</span>
           <span><i className='plus'></i><i className='arrow-down'></i></span>
           <span><i className='trash'></i></span>
-
-          {!terminalState.open && (<span onClick={onTerminal}><i className='arrow-up' id='expandTerminal'></i></span>)}
-          {terminalState.open && (<span onClick={onTerminal}><i className='arrow-down' id='expandTerminal'></i></span>)}
+          <span onClick={onTerminal}><i className={terminalState.open ? `arrow-down` : `arrow-up`} id='expandTerminal'></i></span>
 
           <span onClick={() => { document.getElementById("footer")!.style.display = "none"; }}>
             <i className='close'></i>
           </span>
         </div>
       </div>
-
-
 
     </footer>
   );

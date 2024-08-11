@@ -2,18 +2,22 @@ import { useState, useEffect } from "react";
 import classes from './ToggleTheme.module.css';
 
 
-const ToggleTheme: React.FC = (props) => {
-
-    const [theme, setTheme] = useState<Boolean>(false);
+const ToggleTheme: React.FC = () => {
 
     const body = document.querySelector("body")!;
 
+    const [theme, setTheme] = useState<Boolean>(() => {
+        const savedTheme = localStorage.getItem('theme');
+        return savedTheme === 'light';
+    });
+
+
     useEffect(() => {
         body.dataset.theme = theme ? "light" : "dark";
+        localStorage.setItem('theme', theme ? 'light' : 'dark');
     }, [theme]);
 
     const changeTheme = () => setTheme((prevTheme) => !prevTheme);
-
 
     return (
         <a className={classes.themeToggle} tabIndex={0} onClick={changeTheme} onKeyDown={changeTheme}>
@@ -35,4 +39,3 @@ const ToggleTheme: React.FC = (props) => {
     );
 };
 export default ToggleTheme;
-

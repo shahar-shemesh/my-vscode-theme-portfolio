@@ -1,9 +1,10 @@
 
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import classes from './Contact.module.css';
-import { useDispatch } from 'react-redux';
-import { dispayLeaveMessage } from '../../store/terminalSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { dispayLeaveMessage } from '../../../store/terminalSlice';
+import { RootState } from '../../../store';
 
 const Contact: React.FC<{
     formRef: React.RefObject<HTMLFormElement>,
@@ -12,6 +13,13 @@ const Contact: React.FC<{
 }> = (props) => {
 
     const dispatch = useDispatch();
+    const terminalState: boolean = useSelector((state: RootState) => state.terminal.open);
+    const emailInputRef: React.RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+        if (terminalState && emailInputRef.current)
+            emailInputRef.current.focus();
+    }, [terminalState]);
 
     const formRef: React.RefObject<HTMLFormElement> = useRef<HTMLFormElement>(null);
     const submit: React.RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null);
@@ -44,8 +52,6 @@ const Contact: React.FC<{
                 }
             },
         );
-
-
     };
 
 
@@ -53,7 +59,7 @@ const Contact: React.FC<{
         <form className={classes.contactForm} ref={formRef} onSubmit={sendEmail}>
             <span className={classes.field}>
                 <label>Email:</label>
-                <input type="email" name="user_email" required={true} />
+                <input type="email" name="user_email" ref={emailInputRef} required={true} />
             </span>
             <span className={classes.field}>
                 <label>Message:</label>
