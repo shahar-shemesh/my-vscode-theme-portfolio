@@ -155,7 +155,7 @@
       "id": "3",
       "src": "/img/vscode.jpg",
       "title": "VSCode Portfolio",
-      "description": "A themeable and developer-centric portfolio based on the VSCode style.",
+      "description": "A personal portfolio built with React and TypeScript, featuring custom components and VSCode-inspired theming. It includes theme toggling and UI components that mimic a developer's environment.",
       "link": "shahar.website",
       "technologics": [
         "react",
