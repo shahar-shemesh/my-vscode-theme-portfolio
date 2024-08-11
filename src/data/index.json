@@ -172,7 +172,7 @@
       "src": "/img/askmeanything.png",
       "title": "ask me anything",
       "description": "Flask-based app using OpenAI API for Q&A, with PostgreSQL for data storage. Dockerized with Docker Compose and tested with pytest.",
-      "link": "https://github.com/shahar-shemesh/askMeAnything",
+      "link": "github.com/shahar-shemesh/askMeAnything",
       "technologics": [
         "flask",
         "python",
