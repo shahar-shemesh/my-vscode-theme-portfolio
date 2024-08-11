@@ -76,9 +76,3 @@ Please contribute using [GitHub Flow](https://guides.github.com/introduction/flo
 <h2>🛡️ License:</h2>
 
 This project is licensed under the MIT License.
-
-<h2>💖 Like my work?</h2>
-
-If you found this project helpful, please consider supporting me with a star on GitHub or a coffee.
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T24KNL5)
