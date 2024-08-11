@@ -23,7 +23,7 @@ Here're some of the project's best features:
 <p>1. Clone the repository</p>
 
 ```bash
-git clone [https://github.com/shahar-shemesh/my-vscode-theme-portfolio]
+git clone https://github.com/shahar-shemesh/my-vscode-theme-portfolio
 ```
 
 <p>2. Install the dependencies</p>
