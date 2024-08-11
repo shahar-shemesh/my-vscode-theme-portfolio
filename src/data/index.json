@@ -153,7 +153,7 @@
     },
     {
       "id": "3",
-      "src": "/img/vscode.jpg",
+      "src": "/img/vscode.png",
       "title": "VSCode Portfolio",
       "description": "A personal portfolio built with React and TypeScript, featuring custom components and VSCode-inspired theming. It includes theme toggling and UI components that mimic a developer's environment.",
       "link": "github.com/shahar-shemesh/my-vscode-theme-portfolio",
