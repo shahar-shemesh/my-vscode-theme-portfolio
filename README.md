@@ -1,24 +1,14 @@
 
 <h1 align="center">My VSCode Theme Portfolio</h1>
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dk22rcdch/image/upload/v1630127769/Blogimages/Screenshot_2021-08-28_at_10.46.02_AM_yapvfb.png" alt="project">
-</p>
+<p align="center"><img src="https://res.cloudinary.com/dk22rcdch/image/upload/v1630127769/Blogimages/Screenshot_2021-08-28_at_10.46.02_AM_yapvfb.png" alt="project"></p>
+
 
 <p>This project is a personal portfolio built with React and TypeScript, showcasing custom components and theming inspired by Visual Studio Code. It allows users to toggle between different themes and features various UI components that reflect the style and functionality of a developer's environment.</p>
 
-<p align="center">
-  <img src="https://img.shields.io/github/license/saurabhnative/create-frontend-readme" alt="license">
-  <img src="https://img.shields.io/github/stars/saurabhnative/create-frontend-readme" alt="stars">
-  <img src="https://img.shields.io/github/forks/saurabhnative/create-frontend-readme" alt="forks">
-  <a href="https://twitter.com/intent/tweet?text=Checkout%20readme-gen.vercel.app%20by%20@saurabhnative.%20Most%20advanced%20README%20generator%20for%20your%20Github projects🔥">
-    <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsaurabhnative%2Fcreate-frontend-readme">
-  </a>
-</p>
-
 <h2>🚀 Demo</h2>
 
-[https://readme-gen.vercel.app/](https://readme-gen.vercel.app/)
+[https://shahar.website/](https://shahar.website/)
 
 <h2>🧐 Features</h2>
 
@@ -34,7 +24,7 @@ Here're some of the project's best features:
 <p>1. Clone the repository</p>
 
 ```bash
-git clone [your-repo-url]
+git clone [https://github.com/shahar-shemesh/my-vscode-theme-portfolio]
 ```
 
 <p>2. Install the dependencies</p>
@@ -53,7 +43,6 @@ npm start
 
 - **src/**: Contains the source code of the application.
   - **components/**: Reusable components used throughout the app.
-  - **data/**: Static JSON files used for data representation.
   - **store/**: Redux store and slices for managing global state.
   - **index.tsx**: The main entry point for the React application.
   - **App.tsx**: The root component of the app.
