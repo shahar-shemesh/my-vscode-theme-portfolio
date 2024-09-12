@@ -14,6 +14,23 @@
     },
     {
       "id": "1",
+      "title": "Backend",
+      "stack": [
+        {
+          "name": "Node",
+          "icon": "NodeJS"
+        },
+        "Angular",
+        "Django",
+        "Flask",
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL",
+        "Firebase"
+      ]
+    },
+    {
+      "id": "2",
       "title": "Frontend",
       "stack": [
         {
@@ -31,22 +48,6 @@
           "name": "Next",
           "icon": "NextJS"
         }
-      ]
-    },
-    {
-      "id": "2",
-      "title": "Backend",
-      "stack": [
-        {
-          "name": "Node",
-          "icon": "NodeJS"
-        },
-        "Flask",
-        "Django",
-        "MongoDB",
-        "MySQL",
-        "PostgreSQL",
-        "Firebase"
       ]
     }
   ],
