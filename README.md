@@ -7,7 +7,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://shahar.website/](https://shahar.website/)
+[https://shahar.site/](https://shahar.site/)
 
 <h2>🧐 Features</h2>
 
