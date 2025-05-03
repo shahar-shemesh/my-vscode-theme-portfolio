@@ -20,6 +20,7 @@
           "name": "Node",
           "icon": "NodeJS"
         },
+        "NestJS",
         "Angular",
         "Django",
         "Flask",
@@ -33,6 +34,8 @@
       "id": "2",
       "title": "Frontend",
       "stack": [
+        "React",
+        "Redux",
         {
           "name": "HTML",
           "icon": "HTML5"
@@ -42,8 +45,6 @@
           "icon": "CSS3"
         },
         "Tailwind-CSS",
-        "React",
-        "Redux",
         {
           "name": "Next",
           "icon": "NextJS"
