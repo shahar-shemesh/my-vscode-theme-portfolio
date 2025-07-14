@@ -57,7 +57,8 @@
 
 
     >a {
-        animation: show calc(var(--n)*12.5ms) forwards;
+        animation: show calc(var(--n)*16ms) forwards;
+
         &::selection {
             color: var(--keywordColor);
             text-decoration-line: underline;

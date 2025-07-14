@@ -26,13 +26,20 @@ const About: React.FC = (props) => {
                         onDragOver={(e) => (e.preventDefault())}
                         onDrop={(e) => (e.preventDefault())}
                     >
-                        Hello there, welcome to my corner of the internet! I'm Shahar, a computer science graduate,{"\n"}
-                        a software engineer by day, and an enthusiast of trips, music, and gadgets all the time!{"\n"}
-                        I have always been interested and intrigued by computers and technology. Since I can remember,{"\n"}I've known what I wanted to do.
-                        I love coding, creating, math, and playing piano.{"\n"}
+                        Hi there, and welcome to my little corner of the internet!{"\n"}
+                        I'm Shahar – a full-stack developer and computer science graduate with a deep passion for code, creativity, and technology.{"\n"}
+                        I've been fascinated by computers for as long as I can remember, and I always knew this is what I wanted to do.{"\n"}
+                        I love building cool things, solving problems, learning new tools, and creating clean, meaningful experiences –{"\n"}
+                        whether it’s with JavaScript, Python, Node, or whatever comes next. I'm also into music, gadgets, and a good cup of coffee ☕.{"\n"}
 
-                        Feel free to poke around my <a contentEditable={false} href='https://github.com/shahar-shemesh' target='_blank'>GitHub</a>, contact me for a chat at <a contentEditable={false} href='mailto:shahar@usa.com'>shahar@usa.com</a>, or connect on <a contentEditable={false} href='https://linkedin.com/in/shaharshemesh' target='_blank'>LinkedIn</a>.{"\n"}
-                        Always looking to make new friends and meet new people!
+                        Feel free to explore my projects, check out my{" "}
+                        <a contentEditable={false} href='https://github.com/shahar-shemesh' target='_blank'>GitHub</a>,{" "}
+                        drop me a message via{" "}
+                        <a contentEditable={false} href='mailto:shahar@usa.com'>shahar@usa.com</a>,{" "}
+                        or connect on{" "}
+                        <a contentEditable={false} href='https://linkedin.com/in/shaharshemesh' target='_blank'>LinkedIn</a>.{"\n"}
+                        Let’s connect, create, and maybe even collaborate!
+
 
                     </span>
                 </div>
