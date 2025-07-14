@@ -57,7 +57,7 @@
 
 
     >a {
-        animation: show calc(var(--n)*16ms) forwards;
+        animation: show calc(var(--n)*17ms) forwards;
 
         &::selection {
             color: var(--keywordColor);
