@@ -33,11 +33,11 @@ const About: React.FC = (props) => {
                         whether it’s with JavaScript, Python, Node, or whatever comes next. I'm also into music, gadgets, and a good cup of coffee ☕.{"\n"}
 
                         Feel free to explore my projects, check out my{" "}
-                        <a contentEditable={false} href='https://github.com/shahar-shemesh' target='_blank'>GitHub</a>,{" "}
+                        <a contentEditable={false} href='https://github.com/shahar-shemesh' rel="noreferrer" target='_blank'>GitHub</a>,{" "}
                         drop me a message via{" "}
                         <a contentEditable={false} href='mailto:shahar@usa.com'>shahar@usa.com</a>,{" "}
                         or connect on{" "}
-                        <a contentEditable={false} href='https://linkedin.com/in/shaharshemesh' target='_blank'>LinkedIn</a>.{"\n"}
+                        <a contentEditable={false} href='https://linkedin.com/in/shaharshemesh' rel="noreferrer" target='_blank'>LinkedIn</a>.{"\n"}
                         Let’s connect, create, and maybe even collaborate!
 
 
