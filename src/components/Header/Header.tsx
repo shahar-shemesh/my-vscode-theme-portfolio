@@ -25,9 +25,9 @@ const Header: React.FC = (props) => {
 
       <div className={classes.contactButtons}>
         <ToggleTheme />
-        <a className={classes.platformLink} target='_blank' href="mailto:shahar@usa.com"><i className={`${classes.icon} bx bx-md bx-envelope`}></i></a>
-        <a className={classes.platformLink} target='_blank' href="https://www.linkedin.com/in/shaharshemesh"><i className={`${classes.icon} bx bx-md bxl-linkedin-square`} ></i></a>
-        <a className={classes.platformLink} target='_blank' href="https://github.com/shahar-shemesh"><i className={`${classes.icon} bx bx-md bxl-github`} ></i></a>
+        <a className={classes.platformLink} target='_blank' href="mailto:shahar@usa.com" rel="noreferrer"><i className={`${classes.icon} bx bx-md bx-envelope`}></i></a>
+        <a className={classes.platformLink} target='_blank' href="https://www.linkedin.com/in/shaharshemesh" rel="noreferrer"><i className={`${classes.icon} bx bx-md bxl-linkedin-square`} ></i></a>
+        <a className={classes.platformLink} target='_blank' href="https://github.com/shahar-shemesh" rel="noreferrer"><i className={`${classes.icon} bx bx-md bxl-github`} ></i></a>
       </div>
 
 

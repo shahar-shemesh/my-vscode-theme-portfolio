@@ -30,7 +30,7 @@ const Card: React.FC<{ item: portfolioProject }> = ({item}) => {
                 </p>
                 <p className={classes.link}>
                     Link: <span className={classes.fields}>
-                        <a target='_blank' href={"https://" + item.link} className={classes.aLink}>
+                        <a target='_blank' href={"https://" + item.link} className={classes.aLink} rel="noreferrer">
                             {item.link.length > 50 ? `${item.link.substring(0, 47)}...` : item.link}
                         </a>
                     </span>
