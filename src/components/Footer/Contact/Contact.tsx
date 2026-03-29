@@ -30,8 +30,8 @@ const Contact: React.FC<{
         submit.current!.value = "Sending...";
 
         emailjs.sendForm(
-            'shahar.site',
-            'shahar.site',
+            'shahar.cv',
+            'shahar.cv',
             formRef.current!, {
             publicKey:
                 'B2ReO4YLnvHV3iZUt',
