@@ -4,6 +4,7 @@ i[class$="mysql"]:before,
 i[class$="nextjs"]:before,
 i[class$="nestjs"]:before,
 i[class$="c++"]:before,
+i[class$="elasticsearch"]:before,
 i[class$="c"]:before {
     width: 1rem;
     height: 1rem;
