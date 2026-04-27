@@ -24,6 +24,7 @@
         "Angular",
         "Django",
         "Flask",
+        "Elasticsearch",
         "MongoDB",
         "MySQL",
         "PostgreSQL",
