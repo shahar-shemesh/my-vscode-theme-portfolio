@@ -35,7 +35,7 @@ const About: React.FC = (props) => {
                         Feel free to explore my projects, check out my{" "}
                         <a contentEditable={false} href='https://github.com/shahar-shemesh' rel="noreferrer" target='_blank'>GitHub</a>,{" "}
                         drop me a message via{" "}
-                        <a contentEditable={false} href='mailto:shahar@usa.com'>shahar@usa.com</a>,{" "}
+                        <a contentEditable={false} href='mailto:me@shahar.cv'>me@shahar.cv</a>,{" "}
                         or connect on{" "}
                         <a contentEditable={false} href='https://linkedin.com/in/shaharshemesh' rel="noreferrer" target='_blank'>LinkedIn</a>.{"\n"}
                         Let’s connect, create, and maybe even collaborate!
